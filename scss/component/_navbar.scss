@@ -1,0 +1,21 @@
+#navbar{
+    padding: 40px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(155, 154, 114);
+    width: 100%;
+   
+    font-size: 30px;
+        ul{
+            display: flex;
+            justify-content: space-around;
+                li{
+                    list-style-type: none;
+                    
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                }
+        }
+}

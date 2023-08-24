@@ -1,0 +1,19 @@
+html{
+    box-sizing: border-box;
+    
+}
+
+html, body{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+@import './component/_header';
+@import './component/index';
+@import './component/footer';
+@import './component/navbar';
