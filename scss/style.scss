@@ -1,19 +1,24 @@
-html{
-    box-sizing: border-box;
-    
-}
+/*Fonts
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Nunito', sans-serif;*/
+
 
 html, body{
     height: 100%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
 }
 
 *{
     margin: 0;
     padding: 0;
+ 
     
 }
 
 @import './component/_header';
-@import './component/index';
-@import './component/footer';
-@import './component/navbar';
+@import './component/_footer';
+@import './component/_index';

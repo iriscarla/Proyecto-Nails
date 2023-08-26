@@ -1,61 +1,97 @@
 #index_main{
-    background-color: rgb(156, 137, 31);
-    height: 100%;
-    padding: 1%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "slide_main_01 slide_main_02 slide_main_03 slide_main_04";
-        gap: 15px;
-        justify-content: center;
-        .subtitle{
-            position: absolute;
-            text-align: center;
-        }    
-        
-        img{
-               
-                object-fit:contain;
+    background-color: #f7eaec;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-areas: 
+    "slide_main_01 slide_main_02 slide_main_03 slide_main_04";
+    justify-content:center;
+    gap: 2rem;
+    padding: 3rem;
+        .slide{
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
-       
+        }
 
 }
-/*Grid areas main*/
+
+
+//Grid areas main
 .slide_main_01{
     grid-area: slide_main_01;
+    
 }
 
 .slide_main_02{
     grid-area: slide_main_02;
+    
 }
 
 .slide_main_03{
     grid-area: slide_main_03;
+    
 }
 
 .slide_main_04{
     grid-area: slide_main_04;
+    
 }
 
 
-#index_section{
+#index_article{
+    margin: 50px;
     display: flex;
-    
+
         div{
+            margin: 1rem auto 1rem;
+            width: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 400px;
-            background-color: rgb(95, 31, 20);
-                    p{
-                        text-align: center;
-                        color: rgb(5, 5, 5);
-                        font-size: 30px;
+                &:nth-child(2){
+
+
+                    background: rgb(114,164,175);
+background: linear-gradient(90deg, rgba(114,164,175,0.258140756302521) 11%, rgba(229,169,153,0.3925945378151261) 93%);
+
+
+            }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                p{
+                    text-align: center;
+                    
+                    
                 }
         }
+}
+
+
+#index_footer{
+    background: rgb(247,234,236);
+    background: linear-gradient(180deg, rgba(247,234,236,1) 47%, rgba(0,0,0,0.35057773109243695) 95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        .index_footer_title{
+            margin: 2rem;
     }
+        .index_footer_map{
+            ul{
+                li{
+                    font-size: 1rem;
+                    list-style-type: none;
+                        a{
+                            text-decoration: none;
+                        }
+                }
+            }
+        }
 
 
 
 
-
+}

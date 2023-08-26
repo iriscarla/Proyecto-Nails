@@ -1,9 +1,14 @@
-html {
+/*Fonts
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Nunito', sans-serif;*/
+html, body {
+  height: 100%;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html {
+  font-size: 16px;
 }
 
 * {
@@ -12,26 +17,66 @@ html, body {
 }
 
 #index_body {
-  background-color: rgb(233, 227, 227);
+  background-color: #f7eaec;
+  /*Follow at instagram*/
 }
 #index_body #index_header {
-  position: relative;
   width: 100%;
+  position: relative;
   background-color: white;
+}
+#index_body #index_header .navbar {
+  position: absolute;
+  top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 1.3em;
+  width: 85%;
+  background-color: rgba(248, 236, 238, 0.7);
+  font-size: 1.2em;
+}
+#index_body #index_header .navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+#index_body #index_header .navbar ul li {
+  list-style-type: none;
+}
+#index_body #index_header .navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+#index_body #index_header section {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-template-areas: "pic01 pic02";
 }
-#index_body div {
+#index_body #index_header div {
+  height: 600px;
   width: 100%;
 }
-#index_body img {
+#index_body #index_header img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+#index_body .subtitle {
+  height: 150px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7eaec;
+}
+#index_body .subtitle h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
 
+/*Grid areas*/
 .pic01 {
   grid-area: pic01;
 }
@@ -40,25 +85,29 @@ html, body {
   grid-area: pic02;
 }
 
-#index_main {
-  background-color: rgb(156, 137, 31);
-  height: 100%;
-  padding: 1%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "slide_main_01 slide_main_02 slide_main_03 slide_main_04";
-  gap: 15px;
-  justify-content: center;
+#index_footer {
+  height: 300px;
+  background-color: rgb(124, 67, 102);
 }
-#index_main .subtitle {
-  position: absolute;
-  text-align: center;
-}
-#index_main img {
-  object-fit: contain;
+#index_footer p {
+  font-size: 30px;
 }
 
-/*Grid areas main*/
+#index_main {
+  background-color: #f7eaec;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "slide_main_01 slide_main_02 slide_main_03 slide_main_04";
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+#index_main .slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .slide_main_01 {
   grid-area: slide_main_01;
 }
@@ -75,48 +124,44 @@ html, body {
   grid-area: slide_main_04;
 }
 
-#index_section {
+#index_article {
+  margin: 50px;
   display: flex;
 }
-#index_section div {
+#index_article div {
+  margin: 1rem auto 1rem;
+  width: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 400px;
-  background-color: rgb(95, 31, 20);
 }
-#index_section div p {
+#index_article div:nth-child(2) {
+  background: rgb(114, 164, 175);
+  background: linear-gradient(90deg, rgba(114, 164, 175, 0.2581407563) 11%, rgba(229, 169, 153, 0.3925945378) 93%);
+}
+#index_article div img {
+  width: 100%;
+  height: 100%;
+}
+#index_article div p {
   text-align: center;
-  color: rgb(5, 5, 5);
-  font-size: 30px;
 }
 
 #index_footer {
-  height: 300px;
-  background-color: rgb(124, 67, 102);
-}
-#index_footer p {
-  font-size: 30px;
-}
-
-#navbar {
-  padding: 40px;
-  position: absolute;
-  z-index: 1;
-  background-color: rgb(155, 154, 114);
-  width: 100%;
-  font-size: 30px;
-}
-#navbar ul {
+  background: rgb(247, 234, 236);
+  background: linear-gradient(180deg, rgb(247, 234, 236) 47%, rgba(0, 0, 0, 0.3505777311) 95%);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
-#navbar ul li {
+#index_footer .index_footer_title {
+  margin: 2rem;
+}
+#index_footer .index_footer_map ul li {
+  font-size: 1rem;
   list-style-type: none;
 }
-#navbar ul li a {
+#index_footer .index_footer_map ul li a {
   text-decoration: none;
-  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
